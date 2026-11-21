@@ -5,7 +5,7 @@ CampusHub puts everyday student needs in one place: campus events, dining hall h
 **Status:** MVP (Unit 12). Some data is placeholder sample data.
 
 ## Live site
-https://YOUR-USERNAME.github.io/campus-life-super-app/
+https://kalhel96.github.io/campus-life-super-app/index.html
 
 ## Features
 - **Home:** live clock and greeting, campus weather (API), dining countdown, upcoming events
