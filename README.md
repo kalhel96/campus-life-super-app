@@ -21,7 +21,7 @@ https://YOUR-USERNAME.github.io/campus-life-super-app/
 - Deployed with GitHub Pages
 
 ## Setup
-1. Clone the repo: `git clone https://github.com/YOUR-USERNAME/campus-life-super-app.git`
+1. Clone the repo: `git clone https://github.com/kalhel96/campus-life-super-app.git'
 2. Open `index.html` in a browser (or use the VS Code Live Server extension).
 
 No API keys are needed.
