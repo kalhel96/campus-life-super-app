@@ -1,0 +1,99 @@
+/* ===================================================
+   CampusHub custom styles
+   Loaded AFTER Bootstrap so these rules can override it
+   =================================================== */
+
+/* ----- Color variables (easy to change in one place) ----- */
+:root {
+  --campus-main: #1f4e3d;   /* dark green */
+  --campus-accent: #f2b134; /* gold */
+  --page-bg: #f7f7f5;
+  --text: #1c1c1c;
+  --card-bg: #ffffff;
+}
+
+/* Dark mode: same variables, darker values */
+body.dark {
+  --page-bg: #121212;
+  --text: #f1f1f1;
+  --card-bg: #1e1e1e;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--text);
+}
+
+.card {
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+/* ----- Header, footer, buttons ----- */
+.bg-campus { background: var(--campus-main); }
+
+footer a { color: #fff; }
+
+.btn-campus {
+  background: var(--campus-main);
+  color: #fff;
+}
+.btn-campus:hover,
+.btn-campus:focus {
+  background: var(--campus-accent);
+  color: #000;
+}
+
+/* ----- Accessibility: skip link and visible focus ----- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  background: #fff;
+  padding: 8px;
+  z-index: 1000;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--campus-accent);
+  outline-offset: 2px;
+}
+
+/* ----- Home page ----- */
+.hero {
+  border-left: 6px solid var(--campus-accent);
+}
+.feature-card {
+  transition: transform 0.2s;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ----- Events page ----- */
+.event-card .save-btn.saved {
+  background: var(--campus-accent);
+}
+
+/* ----- Dining page ----- */
+.status-open { color: #1a7f37; font-weight: bold; }
+.status-closed { color: #b42318; font-weight: bold; }
+.meal-img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ----- Map page ----- */
+#map {
+  height: 450px;
+  border-radius: 8px;
+}
+
+/* ----- Responsive: smaller map on phones ----- */
+@media (max-width: 767px) {
+  #map { height: 320px; }
+  h1 { font-size: 1.8rem; }
+}

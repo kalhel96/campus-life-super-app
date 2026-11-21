@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusHub | Dining</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dining">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-campus">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">CampusHub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="dining.html">Dining</a></li>
+            <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
+          </ul>
+          <button id="themeToggle" class="btn btn-outline-light btn-sm ms-md-3 mt-2 mt-md-0">Dark mode</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="container my-4">
+    <h1>Dining</h1>
+
+    <!-- ===== MEAL TABS ===== -->
+    <div class="btn-group mb-4" role="group" aria-label="Choose a meal">
+      <button class="btn btn-outline-dark meal-tab" data-meal="breakfast">Breakfast</button>
+      <button class="btn btn-outline-dark meal-tab" data-meal="lunch">Lunch</button>
+      <button class="btn btn-outline-dark meal-tab" data-meal="dinner">Dinner</button>
+    </div>
+
+    <!-- ===== HALL STATUS CARDS (open/closed is worked out in JavaScript) ===== -->
+    <section id="hallCards" class="row g-3 mb-4" aria-live="polite"></section>
+
+    <div class="row g-4">
+      <!-- ===== DIETARY FILTERS ===== -->
+      <aside class="col-md-3">
+        <div class="card p-3">
+          <h2 class="h6">Dietary filters</h2>
+          <div class="form-check"><input class="form-check-input diet" type="checkbox" value="V" id="dietV"><label class="form-check-label" for="dietV">Vegetarian</label></div>
+          <div class="form-check"><input class="form-check-input diet" type="checkbox" value="GF" id="dietGF"><label class="form-check-label" for="dietGF">Gluten-free</label></div>
+          <div class="form-check"><input class="form-check-input diet" type="checkbox" value="H" id="dietH"><label class="form-check-label" for="dietH">Halal</label></div>
+        </div>
+      </aside>
+
+      <!-- ===== MENU LIST ===== -->
+      <section class="col-md-5">
+        <div class="card p-3">
+          <h2 class="h5" id="menuTitle">Menu</h2>
+          <ul id="menuList" class="list-group list-group-flush"></ul>
+        </div>
+      </section>
+
+      <!-- ===== MEAL IDEA (TheMealDB API) ===== -->
+      <section class="col-md-4">
+        <div class="card p-3" aria-live="polite">
+          <h2 class="h6">Meal idea (for when halls are closed)</h2>
+          <div id="mealIdea">Loading a meal idea...</div>
+          <button id="newIdea" class="btn btn-campus btn-sm mt-2">New idea</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-campus text-white text-center py-3 mt-4">
+    <p class="mb-1"><a href="index.html">Home</a> · <a href="events.html">Events</a> · <a href="dining.html">Dining</a> · <a href="map.html">Map</a></p>
+    <small>Data: Open-Meteo, TheMealDB, OpenStreetMap · © 2026 CampusHub</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
